@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+    marvel:
+        ports:
+            - '8192:8192'
+        image: joelgarciajr/marvel
+    dc:
+        ports:
+            - '8191:8191'
+        image: joelgarciajr/dc
+    nginx:
+        image: nginx:latest
+        ports:
+        - "8080:8080"
+        volumes:
+            - "./nginx-reverse-proxy/server.conf:/etc/nginx/conf.d/server.conf"
+        depends_on:
+        - marvel
+        - dc
