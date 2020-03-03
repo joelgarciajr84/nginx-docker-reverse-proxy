@@ -24,7 +24,7 @@ Common uses for a  [reverse proxy server](https://docs.nginx.com/nginx/admin-gui
 
 # How it works
 
- Nginx will work as a reverse proxy for every request, so, instead of make a request to `http://localhost:8191/get-hero/` or `http://localhost:8191/get-hero`, it is possible to make a direct request to `http://localhost:8080/marvel/get-hero`or `http://localhost:8080/marvel/get-hero` . Nginx will intercept the request and make a proxy_pass to the specific container.
+ Nginx will work as a reverse proxy for every request, so, instead of make a request to `http://localhost:8191/get-hero/` or `http://localhost:8192/get-hero`, it is possible to make a direct request to `http://localhost:8080/marvel/get-hero`or `http://localhost:8080/dc/get-hero` . Nginx will intercept the request and make a proxy_pass to the specific container.
 
 # How to run
 
